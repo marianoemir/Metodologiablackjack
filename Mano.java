@@ -5,7 +5,9 @@
 package blackjack.game;
 import java.util.Vector;
 /**
- 
+ Te haces la linda,estas baqueteada NEGRAAAA
+ bombacha cagada...atrevida mal educada NEGRAA
+ bombacha cagada
  */
 public class Mano {
     /* Con esta clase vamos a representar las cartas que tiene un jugador en cierta
