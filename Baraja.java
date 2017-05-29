@@ -2,7 +2,7 @@ package blackjack.game;
 
 /**
  *
- * @author Edark
+ * @author Mariano Chirino
  */
 public class Baraja {
     /* Clase que representara nuestra baraja de 52 cartas*/
