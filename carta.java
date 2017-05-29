@@ -2,6 +2,7 @@ package blackjack.game;
 
 /**
  *
+ * @author SebaMiranda
  */
 public class Carta {
     /* Clase con la que vamos a representar cada una de las cartas de la baraja */
