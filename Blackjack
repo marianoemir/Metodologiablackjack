@@ -1,0 +1,43 @@
+package blackjack.game;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Diego Blanco
+ */
+public class BlackjackGame {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int saldo;
+        int[] resultados;
+        int[] saldos;
+        int numero, i;
+        Mano manoJugador[];
+        boolean primera = true;
+        boolean bancarrota[];
+// Presentacion
+
+        JOptionPane.showMessageDialog(null, "Bienvenido al juego de Blackjack.");
+
+
+
+        JOptionPane.showMessageDialog(null, "                AUTORES  : \n    Diego, Lucas, Sebastián y Mariano");
+
+
+// Preguntamos por número de jugadores y por la cantidad con la que
+//empiezan
+
+        numero = Integer.parseInt(JOptionPane.showInputDialog("Numero de jugadores:"));
+
+        saldo = Integer.parseInt(JOptionPane.showInputDialog("Con que cantidad empezara cada jugador (euros)?"));
+// Inicializamos los arrays que vamos a utilizar
+        saldos = new int[numero];
+        manoJugador = new Mano[numero];
+        resultados = new int[numero + 1];
+        bancarrota = new boolean[numero];
+        for (i = 0; i < numero; i++) {
+            saldos[i] = saldo;
+            bancarrota[i] = false;
+        }
