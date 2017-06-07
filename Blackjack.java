@@ -24,12 +24,11 @@ public class BlackjackGame {
 
         JOptionPane.showMessageDialog(null, "                AUTORES  : \n    Diego, Lucas, Sebastián y Mariano");
 
-
-// Preguntamos por número de jugadores y por la cantidad con la que
-//empiezan
-
-        numero = Integer.parseInt(JOptionPane.showInputDialog("Numero de jugadores:"));
-
+while (a==1){
+           
+           numero = Integer.parseInt(JOptionPane.showInputDialog("Numero de jugadores:"));
+        
+        if (numero>0 && numero <=4) {
         saldo = Integer.parseInt(JOptionPane.showInputDialog("Con que cantidad empezara cada jugador (euros)?"));
 // Inicializamos los arrays que vamos a utilizar
         saldos = new int[numero];
@@ -40,6 +39,8 @@ public class BlackjackGame {
             saldos[i] = saldo;
             bancarrota[i] = false;
         }
+
+
 // Comienza el bucle...
         while (true) {
 // Le preguntamos a cada jugador cuanto dinero desea apostar
@@ -49,7 +50,7 @@ public class BlackjackGame {
                 if (saldos[j] <= 0) {
                     bancarrota[j] = true;
                 }
-
+            
                 JOptionPane.showMessageDialog(null, "JUGADOR NUMERO " + (j + 1) + ". Tiene " + saldos[j]
                         + " euros.");
                 if (!bancarrota[j]) {
@@ -112,7 +113,15 @@ public class BlackjackGame {
                 }
             }
         }
+        }
+        
+           System.out.println("Número incorrecto, vuelva a intentar");
+        }
     }
+// Preguntamos por número de jugadores y por la cantidad con la que
+//empiezan
+
+       
 // Metodo jugar que lleva el desarrollo principal de la partida
     static int[] jugar(int jugadores, Mano[] manoJugador, boolean[] bancarrota) {
         Baraja baraja;
